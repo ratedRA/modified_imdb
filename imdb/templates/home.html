@@ -1,0 +1,65 @@
+{% load static %}
+<!doctype html>
+	<html lang="en">
+	  <head>
+  <title>Imdb top 200 india</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Orbitron" rel="stylesheet">
+  <style>
+	hr { 
+	  display: block;
+	  margin-top: 0.9em;
+	  margin-bottom: 2em;
+	  margin-left: auto;
+	  margin-right: auto;
+	  border-style: inset;
+	  border-width: 1px;
+	  border-bottom: 1px solid #A9A9A9;
+	} 
+	.footer {
+   position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   background-color: red;
+   color: white;
+   text-align: center;
+}
+	</style>
+ </head>
+	  <body style="background-image:url({% static 'img/uni.jpg' %});" class = "trans">
+	  	
+	  	<div class = "container">
+	  		<h2 style = "margin-bottom: 50px; margin-top: 50px;font-family: 'Orbitron'; color:#ffffff;"> Top 200 Indian movies on IMDb </h2>
+	  		<a href = '/into_db/'><button type="button" class="btn btn-secondary">Reload/refresh database</button></a>
+	  	<div class = "row">
+	  		<div class = "col-sm-8 col-md-8 col-xs-8">
+			    
+			    <img src = "{% static 'img/IMDB.jpg' %}" class = "img-fluid" style = "width: 771px;"/>
+			</div>
+			<div class = "col-sm-4 col-md-4 col-xs-4">
+			     <div class="panel panel-success">
+			      <div class="panel-heading">Queries</div>
+			      <div class="panel-body">
+			      	<b>1. </b><a href = '/actors_list/'>Top 20 Actors/Actresses appearing in these movies.</a>
+			      	<hr>
+			      	<b>2. </b><a href = '/unique_actors/'>Actors/Actresses appearing only once in any of these movies.</a>
+			      	<hr>
+			      	<b>3. </b><a href = '/act_dir/'>Top 10 Actor-Director pair appearing in these movies.</a>
+			      	<hr>
+			      	<b>4. </b><a href = '/castCrew_other/'>Lead Actors/Actresses from any movie involved as crew of any other movie.</a>
+			      </div>
+			      </div>
+			</div>
+		</div>
+	</div>
+<div class="footer">
+  <p>info@ meaman2863@gmail.com</p>
+</div>
+	    
+	  </body>
+	</html>

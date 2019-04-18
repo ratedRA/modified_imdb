@@ -1,0 +1,68 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>imdb</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+<style>
+.my-custom-scrollbar {
+  position: relative;
+  height: 500px;
+  overflow: auto;
+  width: 500px;
+}
+.table-wrapper-scroll-y {
+  display: block;
+}
+.jumbotron {
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+tr:nth-child(even){background-color: #f2f2f2}
+</style>
+</head>
+<body style="background-image:url({% static 'img/bolly.jpg' %})">
+
+<div class = "container">
+	<div class = "jumbotron" style = "margin-top: 20px;">
+		<center>
+<h2 style = "color:crimson;">Query #2</h2>
+<a href = "/" style = "float:right;"> <u><b>Home</b></u></a>
+<p>Actors/Actresses appearing only once in any of these movies.
+</p>
+</center>
+</div>
+</div>
+<center>
+<div class = "container">
+<div class="table-wrapper-scroll-y my-custom-scrollbar">
+
+  <table class="table table-bordered" style = "background-color: #fff;">
+    <thead style = "background-color: crimson;color:white;">
+      <tr>
+        <th scope="col">Actor's Name</th>
+      </tr>
+    </thead>
+    <tbody>
+
+    	{% for actors in unique_actors %}
+      <tr>
+        <td>{{actors.name}}</td>
+      </tr>
+      {%endfor%}
+     
+    </tbody>
+  </table>
+</div>
+</div>
+
+</center>
+</body>
+</html>

@@ -1,0 +1,341 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>imdb</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+<style>
+.my-custom-scrollbar {
+  position: relative;
+  height: 500px;
+  overflow: auto;
+  
+}
+.table-wrapper-scroll-y {
+  display: block;
+}
+.jumbotron {
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+tr:nth-child(even){background-color: #f2f2f2}
+</style>
+</head>
+<body style="background-image:url({% static 'img/bolly.jpg' %})">
+
+<div class = "container">
+	<div class = "jumbotron" style = "margin-top: 20px;">
+		<center>
+<h2 style = "color:crimson;">Query #4</h2>
+<a href = "/" style = "float:right;"> <u><b>Home</b></u></a>
+<p>Lead Actors/Actresses from any movie involved as crew of any other movie (for each language)
+</p>
+</center>
+</div>
+</div>
+<center>
+<div class = "container">
+	<div class = "row">
+		<div class = "col-sm-3 col-md-3 col-md-3">
+<div class="table-wrapper-scroll-y my-custom-scrollbar">
+
+  <table class="table table-bordered" style = "background-color: #fff;">
+    <thead style = "background-color: crimson;color:white;">
+      <tr>
+        <th scope="col">Actor</th>
+        <th scope="col">Movie (Hindi) </th>
+      </tr>
+    </thead>
+    <tbody>
+
+    	{% for ele in castCrew_other %}
+    	{% if ele.lang == 'Hindi' %}
+      <tr>
+        <td>{{ele.actor}}</td>
+        <td>{{ele.movie}}</td>
+      </tr>
+      	{% endif %}
+      {%endfor%}
+     
+    </tbody>
+  </table>
+</div>
+</div>
+<div class = "col-sm-3 col-md-3 col-md-3">
+<div class="table-wrapper-scroll-y my-custom-scrollbar">
+
+  <table class="table table-bordered" style = "background-color: #fff;">
+    <thead style = "background-color: crimson;color:white;">
+      <tr>
+        <th scope="col">Actor</th>
+        <th scope="col">Movie (English)</th>
+      </tr>
+    </thead>
+    <tbody>
+
+    	{% for ele in castCrew_other1 %}
+    	{% if ele.lang == 'English' %}
+      <tr>
+        <td>{{ele.actor}}</td>
+        <td>{{ele.movie}}</td>
+      </tr>
+      	{% endif %}
+      {%endfor%}
+     
+    </tbody>
+  </table>
+</div>
+</div>
+<div class = "col-sm-3 col-md-3 col-md-3">
+<div class="table-wrapper-scroll-y my-custom-scrollbar">
+
+  <table class="table table-bordered" style = "background-color: #fff;">
+    <thead style = "background-color: crimson;color:white;">
+      <tr>
+        <th scope="col">Actor</th>
+        <th scope="col">Movie (Tamil)</th>
+      </tr>
+    </thead>
+    <tbody>
+
+    	{% for ele in castCrew_other %}
+    	{% if ele.lang == 'Tamil' %}
+      <tr>
+        <td>{{ele.actor}}</td>
+        <td>{{ele.movie}}</td>
+      </tr>
+      	{% endif %}
+      {%endfor%}
+     
+    </tbody>
+  </table>
+</div>
+</div>
+<div class="table-wrapper-scroll-y my-custom-scrollbar">
+
+  <table class="table table-bordered" style = "background-color: #fff;">
+    <thead style = "background-color: crimson;color:white;">
+      <tr>
+        <th scope="col">Actor</th>
+        <th scope="col">Movie (Urdu)</th>
+      </tr>
+    </thead>
+    <tbody>
+
+    	{% for ele in castCrew_other %}
+    	{% if ele.lang == 'Urdu' %}
+      <tr>
+        <td>{{ele.actor}}</td>
+        <td>{{ele.movie}}</td>
+      </tr>
+      	{% endif %}
+      {%endfor%}
+       <tr>
+        <td>None</td>
+        <td>None</td>
+      </tr>
+     
+    </tbody>
+  </table>
+</div>
+</div>
+<br><br><br>
+<div class = "row">
+		<div class = "col-sm-3 col-md-3 col-md-3">
+<div class="table-wrapper-scroll-y my-custom-scrollbar">
+
+  <table class="table table-bordered" style = "background-color: #fff;">
+    <thead style = "background-color: crimson;color:white;">
+      <tr>
+        <th scope="col">Actor</th>
+        <th scope="col">Movie (Kannada)</th>
+      </tr>
+    </thead>
+    <tbody>
+
+    	{% for ele in castCrew_other %}
+    	{% if ele.lang == 'Kannada' %}
+      <tr>
+        <td>{{ele.actor}}</td>
+        <td>{{ele.movie}}</td>
+      </tr>
+      	{% endif %}
+      {%endfor%}
+     
+    </tbody>
+  </table>
+</div>
+</div>
+<div class = "col-sm-3 col-md-3 col-md-3">
+<div class="table-wrapper-scroll-y my-custom-scrollbar">
+
+  <table class="table table-bordered" style = "background-color: #fff;">
+    <thead style = "background-color: crimson;color:white;">
+      <tr>
+        <th scope="col">Actor</th>
+        <th scope="col">Movie (Telugu)</th>
+      </tr>
+    </thead>
+    <tbody>
+
+    	{% for ele in castCrew_other1 %}
+    	{% if ele.lang == 'Telugu' %}
+      <tr>
+        <td>{{ele.actor}}</td>
+        <td>{{ele.movie}}</td>
+      </tr>
+      	{% endif %}
+      {%endfor%}
+      <tr>
+        <td>None</td>
+        <td>None</td>
+      </tr>
+     
+     
+    </tbody>
+  </table>
+</div>
+</div>
+<div class = "col-sm-3 col-md-3 col-md-3">
+<div class="table-wrapper-scroll-y my-custom-scrollbar">
+
+  <table class="table table-bordered" style = "background-color: #fff;">
+    <thead style = "background-color: crimson;color:white;">
+      <tr>
+        <th scope="col">Actor</th>
+        <th scope="col">Movie (Bengali)</th>
+      </tr>
+    </thead>
+    <tbody>
+
+    	{% for ele in castCrew_other %}
+    	{% if ele.lang == 'Bengali' %}
+      <tr>
+        <td>{{ele.actor}}</td>
+        <td>{{ele.movie}}</td>
+      </tr>
+      	{% endif %}
+      {%endfor%}
+     
+    </tbody>
+  </table>
+</div>
+</div>
+<div class="table-wrapper-scroll-y my-custom-scrollbar">
+
+  <table class="table table-bordered" style = "background-color: #fff;">
+    <thead style = "background-color: crimson;color:white;">
+      <tr>
+        <th scope="col">Actor</th>
+        <th scope="col">Movie (Marathi)</th>
+      </tr>
+    </thead>
+    <tbody>
+
+    	{% for ele in castCrew_other %}
+    	{% if ele.lang == 'Marathi' %}
+      <tr>
+        <td>{{ele.actor}}</td>
+        <td>{{ele.movie}}</td>
+      </tr>
+      	{% endif %}
+      {%endfor%}
+      <tr>
+        <td>None</td>
+        <td>None</td>
+      </tr>
+     
+     
+    </tbody>
+  </table>
+</div>
+</div>
+<br> <br>
+<div class = "row">
+		<div class = "col-sm-3 col-md-3 col-md-3">
+<div class="table-wrapper-scroll-y my-custom-scrollbar">
+
+  <table class="table table-bordered" style = "background-color: #fff;">
+    <thead style = "background-color: crimson;color:white;">
+      <tr>
+        <th scope="col">Actor</th>
+        <th scope="col">Movie (Malyalam)</th>
+      </tr>
+    </thead>
+    <tbody>
+
+    	{% for ele in castCrew_other %}
+    	{% if ele.lang == 'Malyalam' %}
+      <tr>
+        <td>{{ele.actor}}</td>
+        <td>{{ele.movie}}</td>
+      </tr>
+      	{% endif %}
+      {%endfor%}
+      <tr>
+        <td>None</td>
+        <td>None</td>
+      </tr>
+     
+     
+    </tbody>
+  </table>
+</div>
+</div>
+<div class = "col-sm-3 col-md-3 col-md-3">
+<div class="table-wrapper-scroll-y my-custom-scrollbar">
+
+  <table class="table table-bordered" style = "background-color: #fff;">
+    <thead style = "background-color: crimson;color:white;">
+      <tr>
+        <th scope="col">Actor</th>
+        <th scope="col">Movie (Tibetan)</th>
+      </tr>
+    </thead>
+    <tbody>
+
+    	{% for ele in castCrew_other1 %}
+    	{% if ele.lang == 'Tibetan' %}
+      <tr>
+        <td>{{ele.actor}}</td>
+        <td>{{ele.movie}}</td>
+      </tr>
+      	{% endif %}
+      {%endfor%}
+      <tr>
+        <td>None</td>
+        <td>None</td>
+      </tr>
+     
+    </tbody>
+  </table>
+</div>
+</div>
+
+
+</div>
+</div>
+</div>
+
+</center>
+</body>
+</html>
+<!--
+{% for keys in act_dir %}
+<h3 style = "display:inline;">director: </h3>{{keys.director}}
+<h3 style = "display:inline;">actor: </h3>{{keys.cast}}
+<br><br>
+{% endfor %}
+
+{% for ele in castCrew_other %}
+{{ele.movie}}<br>
+{{ele.actor}}<br>
+{{ele.lang}}
+{% endfor %}-->

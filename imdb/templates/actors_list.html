@@ -1,0 +1,81 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>imdb</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+<style>
+.my-custom-scrollbar {
+  position: relative;
+  height: 500px;
+  overflow: auto;
+  width: 500px;
+}
+.table-wrapper-scroll-y {
+  display: block;
+}
+.jumbotron {
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+tr:nth-child(even){background-color: #f2f2f2}
+</style>
+</head>
+<body style="background-image:url({% static 'img/bolly.jpg' %})">
+
+<div class = "container">
+	<div class = "jumbotron" style = "margin-top: 20px;">
+		<center>
+<h2 style = "color:crimson;">Query #1</h2>
+<a href = "/" style = "float:right;"> <u><b>Home</b></u></a>
+<p>Top 20 Actors/Actresses appearing in these movies.
+</p>
+</center>
+</div>
+</div>
+<center>
+<div class = "container">
+	<div class = "row">
+	
+	<div class = "col-md-6 colsm-6">
+		
+<div class="table-wrapper-scroll-y my-custom-scrollbar">
+
+  <table class="table table-bordered" style = "background-color: #fff;">
+    <thead style = "background-color: crimson;color:white;">
+      <tr>
+        <th scope="col">Actor's Name ( From database top-20 actor)</th>
+      </tr>
+    </thead>
+    <tbody>
+
+    	{% for el in actors_from_db %}
+      <tr>
+        <td>{{el.actor}}</td>
+      </tr>
+      {%endfor%}
+     
+    </tbody>
+  </table>
+</div>
+</div>
+</div>
+
+</center>
+</body>
+</html>
+<!--
+{% for el in list_of_actors %}
+<b>{{el.name}}</b>
+{% endfor %}
+<h2>from database</h2>
+{% for el in actors_from_db %}
+<b>{{el.cast}}</b>
+{% endfor %}-->
